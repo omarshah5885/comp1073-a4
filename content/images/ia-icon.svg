@@ -1,0 +1,20 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #333;
+      }
+
+      .cls-2 {
+        fill: #8cc63f;
+      }
+    </style>
+  </defs>
+  <title>ia-icon</title>
+  <g id="Working_Layer" data-name="Working Layer">
+    <g id="IA-icon">
+      <circle id="Background" class="cls-1" cx="250" cy="250" r="250"/>
+      <path id="IA" class="cls-2" d="M434,274V222a5,5,0,0,0-5-5H276V179a5,5,0,0,1,5-5h38a5,5,0,0,0,5-5V80a5,5,0,0,0-5-5H230a5,5,0,0,0-5,5v89a5,5,0,0,0,5,5h36a5,5,0,0,1,5,5v38H122a5,5,0,0,0-5,5v51H80a5,5,0,0,0-5,5v89a5,5,0,0,0,5,5h89a5,5,0,0,0,5-5V279a5,5,0,0,0-5-5H122V223H271v52H230a5,5,0,0,0-5,5v89a5,5,0,0,0,5,5h89a5,5,0,0,0,5-5V279a5,5,0,0,0-5-5H276V222H429v52H380a5,5,0,0,0-5,5v89a5,5,0,0,0,5,5h89a5,5,0,0,0,5-5V279a5,5,0,0,0-5-5H434Z" transform="translate(-26 -24)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--css section-->
+	<link rel="stylesheet" href="content/css/bootstrap.min.css">
+	<link rel="stylesheet" href="content/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="content/css/font-awesome.min.css">
+	<link rel="stylesheet" href="content/app.css">
+	<title>Contact Form | Omar</title>
+</head>
+
+<body>
+	<header>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"><img src="content/images/logo-color.svg"></a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="index.html">About Me</a></li>
+						<li><a href="projects.html">My Projects</a></li>
+						<li class="active"><a href="contact.html">Contact Me</a></li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+	</header>
+
+	<main class="container-fluid">
+
+
+		<!--<div class="row">-->
+		<h2 id="connect1">Connect</h2>
+		<!--</div>-->
+<div class="col-md-6 col-md-offset-3"><p id="connect2">JS rendering</p></div>
+
+
+
+		<form class="panel panel-default col-md-6 col-md-offset-3">
+			<div class="panel-body">
+				<div class="row form-group">
+					<i class="fa fa-user "></i>
+					<input name="name" type="text" class="form-control" placeholder="Name" id="name" required>
+				</div>
+				<div class="row form-group">
+					<i class="fa fa-envelope"></i>
+					<input name="email" type="email" class="form-control" placeholder="Email" id="email" required>
+				</div>
+				<div class="row  form-group">
+					<i class="fa fa-phone fa-lg"></i>
+					<input name="phone" type="tel" class="form-control" id="phone" placeholder="Phone (optional)">
+				</div>
+				<div class="row  form-group">
+					<i class="fa fa-comment "></i>
+					<textarea name="comment" rows="5" class="form-control" placeholder="Comments..." id="comment" required></textarea>
+				</div>
+				<div class="row form-group">
+					<input type="submit" class="btn btn-warning active" id="submit">
+				</div>
+			</div>
+
+		</form>
+
+		<div id="map"></div>
+
+
+	</main>
+	<footer><small><i class="fa fa-copyright"></i> Omar Shah. 2016.</small></footer>
+	<!--JS section-->
+	<script src="scripts/lib/jquery-2.2.0.min.js"></script>
+	<script src="scripts/lib/bootstrap.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAukHRcIrX1bYb2jW3Lt4AG1c_0NRCqzGI"></script>
+	<script src="scripts/xhr.js"></script>
+</body>
+
+</html>
