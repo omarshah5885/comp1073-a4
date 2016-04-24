@@ -1,4 +1,4 @@
-//xhr.js, Omar Shah, http://comp1073-a3.azurewebsites.net/index.html, xml http request js file.  
+//xhr.js, Omar Shah, http://omar-comp1073-a4.azurewebsites.net/, xml http request js file.  
 (function() {
 
     "use strict";
@@ -13,11 +13,44 @@
     canvas.setAttribute("height", screenHeight);
 	
 
+	// step 2) create a staging area for the animation by referencing the canvas 
+    var stage = new createjs.Stage(canvas);
+		
+	
+	// step 3) start an animation session 
+    function init() {
+        // a) establish a frame rate for animation. 
+        createjs.Ticker.framerate = 60;
+
+        // b) link every frame tick event to the animationloop function. 
+        createjs.Ticker.addEventListener("tick", animationLoop); 
+        
+		// c) call the drawing function of the bitmap object to be animated
+        drawing();
+    }
+
+	// step 4) create animation function which updates/redraws the stage upon every frame tick 
+    function animationLoop() {
+
+
+        stage.update();
+    }
+
+    // step 5 a) create a drawing function which provides the image or text object that will be animiated 
+    function drawing() {
+		
+
+    }
+
+    // step 6) load the animation session on windows screen by calling init function
+    window.onload = init;
 
 
 
 
 
+
+// AJAX request to JSON text file
 	var request = new XMLHttpRequest();
 	request.open('GET', 'json.txt', true);
 	request.send();
