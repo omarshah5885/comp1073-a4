@@ -1,0 +1,24 @@
+{
+  "name": "a4",
+  "homepage": "https://github.com/omarshah5885/comp1073-a4",
+  "authors": [
+    "omarshah5885 <umarshah0@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "scripts/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "EaselJS": "easeljs#^0.8.2",
+    "SoundJS": "^0.6.2",
+    "TweenJS": "^0.6.2",
+    "PreloadJS": "^0.6.2"
+  }
+}

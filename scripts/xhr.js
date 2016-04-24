@@ -11,6 +11,10 @@
     var screenHeight = 100;
     canvas.setAttribute("width", screenWidth);
     canvas.setAttribute("height", screenHeight);
+	
+
+
+
 
 
 
