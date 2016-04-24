@@ -54,7 +54,6 @@
 		
 		// create a glowing effect on text by dimming and raising transparency 
 		
-		
 		if (isVisible) {
 			if (projectText.alpha <= 1) {
 				projectText.alpha *= 0.99;
@@ -71,8 +70,10 @@
 			}
 		}
 		
-		
-		
+		// after numerous failed attempts at alpha if statement, I decided to create a glowing effect by the following code: 
+		if (projectText.alpha < 0.40) {
+			projectText.alpha = 1.0;
+		}
 		
 				
 		// redraws stage object per frame from scratch
