@@ -1,12 +1,16 @@
-/*personalized CSS created by Omar Shah for site, http://comp1073-a3.azurewebsites.net/index.html which is a site about me and my works.*/
+/*personalized CSS created by Omar Shah for site, http://omar-comp1073-a4.azurewebsites.net/ which is a site about me and my works.*/
 
 
 #canvas {
-	background: purple;
+	background:rgba(85,26,139, 0.5);
 	border-top-left-radius: 100px;
 	display: block;
-float: right;
-margin-right: 1%;
+	float: right;
+	margin-right: 1%;
+}
+
+#canvas:hover {
+	background:rgb(85,26,139);
 }
 
 
