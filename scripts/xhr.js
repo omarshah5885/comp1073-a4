@@ -54,7 +54,7 @@
 		
 		// create a glowing effect on text by dimming and raising transparency 
 		
-		/*
+		
 		if (isVisible) {
 			if (projectText.alpha <= 1) {
 				projectText.alpha *= 0.99;
@@ -70,7 +70,6 @@
 				isVisible = true;
 			}
 		}
-		*/
 		
 		
 		
