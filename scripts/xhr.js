@@ -17,9 +17,10 @@
     var stage = new createjs.Stage(canvas);
 	
 	// step 5 b) declare every animated text or image as a global variable for accessibility purposes  
-	var projectAd;
+	var projectAd, projectText;
 	var adMoveX = 0.5;
 	var adMoveY = 0.5;
+	var isVisible = true;
 	
 	// step 3) start an animation session 
     function init() {
@@ -50,8 +51,31 @@
 			adMoveX += 0.5;
 			adMoveY += 0.5;
 		}
-
 		
+		// create a glowing effect on text by dimming and raising transparency 
+		
+		/*
+		if (isVisible) {
+			if (projectText.alpha <= 1) {
+				projectText.alpha *= 0.99;
+			} 
+			else {
+				isVisible = false;
+			}
+		} else {
+			if (projectText.alpha <= 0.40) {
+				projectText.alpha *= 1.10;
+			}
+			else {
+				isVisible = true;
+			}
+		}
+		*/
+		
+		
+		
+		
+				
 		// redraws stage object per frame from scratch
         stage.update();
     }
@@ -65,6 +89,21 @@
 		projectAd.scaleY = 0.10;
 		// append image to stage 
         stage.addChild(projectAd);
+		
+		// add a text object on canvas to entice viewers to click 
+		projectText = new createjs.Text("View Now", "20px Candara", "#fff");
+		
+		// change registration mark of text object from top left to direct middle
+        projectText.regX = projectText.getMeasuredWidth() * 0.5;
+        projectText.regY = projectText.getMeasuredHeight() * 0.5;
+        
+        // move text to the middle of the canvas
+        projectText.x = screenWidth * 0.5;
+        projectText.y = screenHeight * 0.5;
+
+        // append to the stage
+        stage.addChild(projectText);
+
 
     }
 
