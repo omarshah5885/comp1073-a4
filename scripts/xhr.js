@@ -16,8 +16,10 @@
 	// step 2) create a staging area for the animation by referencing the canvas 
     var stage = new createjs.Stage(canvas);
 	
-	// step 5 b) declare every animated text or image as a global variable  
+	// step 5 b) declare every animated text or image as a global variable for accessibility purposes  
 	var projectAd;
+	var adMoveX = 0.5;
+	var adMoveY = 0.5;
 	
 	// step 3) start an animation session 
     function init() {
@@ -31,10 +33,26 @@
         drawing();
     }
 
-	// step 4) create animation function which updates/redraws the stage upon every frame tick 
+	// step 4) create animation function which updates the stage upon every frame tick 
     function animationLoop() {
+		// move projectAd diagonally back and forth across canvas
+		projectAd.x += adMoveX; 
+		projectAd.y += adMoveY;
+		
+		if (projectAd.y >= screenHeight) {
+			adMoveY -= 0.5;
+        }
+		if (projectAd.x >= screenWidth) {
+			adMoveX -= 0.5
+			adMoveY += 0.5;
+		}
+		if (projectAd.x <= 0) {
+			adMoveX += 0.5;
+			adMoveY += 0.5;
+		}
 
-
+		
+		// redraws stage object per frame from scratch
         stage.update();
     }
 
@@ -42,13 +60,11 @@
     function drawing() {
 		// create an ad image to display on canvas 
 		projectAd = new createjs.Bitmap("content/images/jsgame.jpg");	
-
 		// scale the image
 		projectAd.scaleX = 0.10;
 		projectAd.scaleY = 0.10;
 		// append image to stage 
-        stage.addChild(projectAd);		
-
+        stage.addChild(projectAd);
 
     }
 
