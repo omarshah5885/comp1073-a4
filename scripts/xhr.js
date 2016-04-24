@@ -15,7 +15,9 @@
 
 	// step 2) create a staging area for the animation by referencing the canvas 
     var stage = new createjs.Stage(canvas);
-		
+	
+	// step 5 b) declare every animated text or image as a global variable  
+	var projectAd;
 	
 	// step 3) start an animation session 
     function init() {
@@ -38,7 +40,15 @@
 
     // step 5 a) create a drawing function which provides the image or text object that will be animiated 
     function drawing() {
-		
+		// create an ad image to display on canvas 
+		projectAd = new createjs.Bitmap("content/images/jsgame.jpg");	
+
+		// scale the image
+		projectAd.scaleX = 0.10;
+		projectAd.scaleY = 0.10;
+		// append image to stage 
+        stage.addChild(projectAd);		
+
 
     }
 
